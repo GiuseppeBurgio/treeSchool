@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Open+Sans:wght@500&display=swap');
+
+body {
+    background-color: #FFBF9B;
+    font-family: 'Inter', sans-serif;
+}
+h1 {
+    text-align: center;
+    color: #4D4D4D;
+}
+ul {
+    color: #4D4D4D;
+    list-style-type: circle;
+    
+}
+li {
+    width: fit-content;
+    cursor: pointer;
+}
+li:hover {
+    color: #B46060;
+}
+p {
+    color:  #4D4D4D;
+}
+img {
+    border: 3px solid #B46060;
+    border-radius: 10%;
+    width: 50%;
+}
+nav {
+    background-color: #FFF4E0 ;
+}
+footer {
+    background-color: #B46060;
+}
+#footer {
+    color: #FFBF9B;
+}
