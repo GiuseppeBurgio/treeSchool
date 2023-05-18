@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: rgb(12, 102, 115);
+  background: linear-gradient(
+    199deg,
+    rgba(12, 102, 115, 1) 0%,
+    rgba(247, 241, 229, 1) 35%,
+    rgba(227, 174, 11, 1) 100%
+  );
+  color: #4c4b16;
+  font-family: 'Exo', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #4c4b16;
+}
+a:hover {
+  color: #e7b10a;
+}
+.ulStyle {
+  list-style-type: none;
+  margin-top: 50px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.immagine {
+  width: 70%;
+  max-width: 800px;
+  margin-left: 50px;
+}
+h1 {
+  margin: 30px 50px;
+}
+p {
+  margin: 20px 50px;
+}
+.container_uno {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.container_due {
+    margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+h2 {
+    margin-left: 50px;
+}
+
+.ul2Style {
+    list-style-type: none;
+    display: flex;
+    margin-left: 50px;
+    margin-top: 20px;
+    gap: 50px;
+
+}
+.ul2Style a:hover{
+    color: rgb(17, 139, 158);
+}
