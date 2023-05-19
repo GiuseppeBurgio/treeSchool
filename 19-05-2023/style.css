@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #f8f1f1;
+  display: flex;
+  flex-direction: column;
+  font-family: "Oswald", sans-serif;
+  color: #025464;
+  height: 100vh;
+}
+
+.modulo {
+  background-color: #ffc28c;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px #ff840042 solid;
+  margin-top: 20px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+input {
+  outline: none;
+  background-color: #e8aa42;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  color: #025464;
+  width: 150px;
+}
+/* #name {
+  margin-left: 30px;
+}
+#surname {
+  margin-left: 10px;
+}
+#mail {
+  margin-left: 30px;
+}
+#password {
+  margin-left: 6px;
+} */
+.bottone {
+  outline: none;
+  background-color: #025464;
+  border-radius: 12px;
+  border: none;
+  color: #f8f1f1;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+.bottone:hover {
+  background-color: #07b8dc;
+  color: #025464;
+}
+input::placeholder {
+  color: #ffc28c;
+}
+.lista {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 15px 0;
+  background-color: #e3781bdf;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.lista a {
+  text-decoration: none;
+  color: #025464;
+}
+.lista a:hover {
+  color: #07b8dc;
+}
+.footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.navbar {
+  width: 100%;
+  position: fixed;
+}
+.mainStyle {
+  padding-top: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hamb {
+  width: 30px;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    width: 80px;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainStyle {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+  .modulo {
+    height: fit-content;
+    width: 200px;
+    padding: 15px;
+  }
+
+  .lista {
+    flex-direction: column;
+    width: fit-content;
+    height: 100vh;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: small;
+    gap: 30px;
+  }
+  .footer {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .lista {
+    display: none;
+  }
+  .hamb {
+    display: block;
+    padding: 5px;
+  }
+  .modulo {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+  #name {
+    margin-left: 0;
+    font-size: 10px;
+  }
+  #surname {
+    margin-left: 0;
+    font-size: 10px;
+  }
+  #mail {
+    margin-left: 0;
+    font-size: 10px;
+  }
+  #password {
+    margin-left: 0;
+    font-size: 10px;
+  }
+  .mainStyle {
+    margin-left: 0;
+  }
+}
