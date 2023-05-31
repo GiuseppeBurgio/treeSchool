@@ -1,0 +1,136 @@
+$primary: #ffd3b0;
+$nav_color: #ff6969;
+$footer_color: #fff9de;
+$text_color: #000000;
+$big_text: 1.6em;
+
+@mixin font_links {
+  font-size: 1.1em;
+  color: #000000;
+  font-weight: 500;
+}
+
+@mixin flex($flexdir: row, $justcont: center) {
+  display: flex;
+  flex-direction: $flexdir;
+  justify-content: $justcont;
+  align-items: center;
+}
+
+/** MEDIA QUERIES */
+
+$mobile: 375px;
+$tablet: 768px;
+$desktop: 1024px;
+
+// @mixin mobile {
+//   @media (min-width: $mobile) {
+//     @content;
+//   }
+// }
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+/** ================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $primary;
+  font-family: "Roboto", sans-serif;
+
+  @include desktop() {
+    margin: 0 auto;
+  }
+
+  /** NAVBAR */
+
+  nav {
+    background-color: $nav-color;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  #hamburger {
+    width: 3em;
+    float: right;
+    @include tablet() {
+      display: none;
+    }
+  }
+  ul {
+    padding: 0;
+    @include flex(row, space-around);
+    list-style-type: none;
+
+    li {
+      display: none;
+      font-weight: 500;
+      @include tablet() {
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+        color: $text_color;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+  /** MAIN */
+
+  main {
+    text-align: center;
+    @include flex(column, center);
+    align-items: center;
+    margin-top: 50px;
+    div {
+      h1 {
+        @include flex(column);
+      }
+    }
+    img {
+      width: 80%;
+      @include tablet() {
+        width: fit-content;
+      }
+    }
+  }
+
+  /** FOOTER */
+
+  footer {
+    ul {
+      height: 3em;
+      background-color: $footer_color;
+      padding: 0;
+      gap: 20px;
+      @include flex(row, space-around);
+      li {
+        list-style-type: none;
+        @include font_links();
+        display: block;
+      }
+    }
+  }
+}
